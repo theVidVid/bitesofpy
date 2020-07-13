@@ -33,7 +33,7 @@ def get_workout_motd(day):
         if day.title() == weekday:
             if task == REST:
                 return CHILL_OUT
-            return f"Go train {task}"
+            return TRAIN.format(task)
         elif day.title() not in WORKOUT_SCHEDULE.keys():
             return INVALID_DAY
 
