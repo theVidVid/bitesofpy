@@ -37,15 +37,16 @@ def strip_vowels(text: str) -> Tuple[str, int]:
     ... it would return:
     ('h*ll* w*rld', 3)
 
-    The str/int types in the function defintion above are part
+    The str/int types in the function definition above are part
     of Python's new type hinting:
     https://docs.python.org/3/library/typing.html"""
-    
+
     for vowel in vowels:
         text = text.replace(vowel.upper(), '*')
         text = text.replace(vowel.lower(), '*')
 
     return text, text.count('*')
+
 
 answer = strip_vowels(text)
 print(answer)
